@@ -1,7 +1,9 @@
 import 'package:fluent_ui/fluent_ui.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:window_manager/window_manager.dart';
 
+import '../../../editor/modules/cubit/dark_mode_cubit.dart';
 import '../../../editor/modules/editor_view.dart';
 import 'window_buttons_widget.dart';
 import 'people/navigation_pane_on_changed_people.dart';

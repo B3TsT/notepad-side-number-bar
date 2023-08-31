@@ -43,21 +43,14 @@ mixin _FluentBodyDesktopStateMixin on State<FluentBodyDesktop> {
             alignment: AlignmentDirectional.centerEnd,
             child: Padding(
               padding: const EdgeInsetsDirectional.only(end: 8.0),
-              child: ToggleSwitch(
-                content: Text(va.labelDarkMode),
-                checked: FluentTheme.of(context).brightness.isDark,
-                onChanged: (v) {
-                  if (v) {
-                    if (kDebugMode) {
-                      print('dark');
-                    }
-                    // appTheme.mode = ThemeMode.dark;
-                  } else {
-                    if (kDebugMode) {
-                      print('light');
-                    }
-                    // appTheme.mode = ThemeMode.light;
-                  }
+              child: BlocBuilder<DarkModeCubit, DarkModeState>(
+                builder: (context, state) {
+                  return ToggleSwitch(
+                    content: Text(va.labelDarkMode),
+                    checked: state.isDarkMode,
+                    onChanged: (value) =>
+                        context.read<DarkModeCubit>().toggleDarkMode(),
+                  );
                 },
               ),
             ),
