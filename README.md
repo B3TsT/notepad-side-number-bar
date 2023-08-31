@@ -1,7 +1,7 @@
 # Notepad
 Notes app in progress with side number bar (vscode).
 
-<p align = center ><img src="ss.png"> </p>
+<p align = center ><img src="ss.PNG"> </p>
 
 
 - There is an **[Error](https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.7.12-stable.zip)** with the textfield in flutter desktop.
